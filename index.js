@@ -118,14 +118,10 @@ makePersonObject(5, "Leia", "leia@leia.com");
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-const personObj = {
-  id: 1 ,
-  name: 'Leia',
-  email: 'leia@leia.com' ,
-getName: function(){
- return `Hello, my name is ${this.name}`;
-}};
-  console.log(personObj.getName());
+function getName({id, name, email}) {
+  return `Hello, my name is ${name}`;
+}
+console.log(getName({ id: 1, name: 'Leia', email: 'leia@leia.com' }));
 
 /**
  * ### Challenge `appleIndex`
